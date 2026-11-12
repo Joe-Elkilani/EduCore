@@ -1,0 +1,92 @@
+.side {
+  width: 250px;
+  background: #10234d;
+  color: white;
+  padding: 25px 12px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  padding: 0 8px;
+}
+
+.logo i {
+  font-size: 50px;
+  color: #3d8bff;
+}
+
+.logo h3 {
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.logo small {
+  font-size: 10px;
+  color: #aab8d4;
+}
+
+.side nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.side nav a {
+  color: #d6deed;
+  text-decoration: none;
+  padding: 12px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.side nav a i {
+  width: 25px;
+  font-size: 16px;
+}
+
+.side nav a:hover,
+.side nav a.active {
+  background: #2367e9;
+}
+
+.side hr {
+  border-color: #52617e;
+  margin: 10px 5px;
+}
+
+.plan {
+  margin-top: auto;
+  background: #193b7c;
+  padding: 20px 10px;
+  text-align: center;
+  border-radius: 7px;
+}
+
+.plan i {
+  font-size: 45px;
+  color: #3487ff;
+  margin-bottom: 12px;
+}
+
+.plan h5 {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.plan button {
+  border: none;
+  background: #2468eb;
+  color: white;
+  border-radius: 20px;
+  padding: 8px 18px;
+  font-size: 13px;
+  margin-top: 10px;
+  font-weight: 500;
+}

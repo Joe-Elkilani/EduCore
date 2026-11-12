@@ -1,7 +1,11 @@
-document
-  .getElementById("shortcut")
-  .addEventListener("keydown", function (event) {
-    if (event.ctrlKey && event.key === "k") {
-      document.getElementById("search").focus();
-    }
-  });
+import { renderSidebar } from "./components/Sidebar/sidebar.js";
+import { renderDashboard } from "./components/Dashboard/dashboard.js";
+
+const app = document.getElementById("app");
+
+app.innerHTML = `
+  ${renderSidebar()}
+
+  ${renderDashboard()}
+  </div>
+`;
