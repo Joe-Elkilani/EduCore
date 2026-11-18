@@ -2,6 +2,16 @@ export function renderDashboard() {
   return `
     <main class="main">
         <header class="top">
+        <button
+            class="sidebar-toggle"
+            id="sidebarToggle"
+            type="button"
+            aria-label="Toggle sidebar"
+            aria-controls="sidebar"
+            aria-expanded="true"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
           <div class="search">
             <label
               for="search"
@@ -15,7 +25,6 @@ export function renderDashboard() {
             />
             <label class="shortcut" for="search" id="shortcut">Ctrl + K</label>
           </div>
-
           <div class="user">
             <div class="bell">
               <i class="fa-regular fa-bell"></i>
@@ -218,10 +227,3 @@ export function renderDashboard() {
       </main>
   `;
 }
-
-document.addEventListener("keydown", function (event) {
-  if (event.ctrlKey && event.key.toLowerCase() === "s") {
-    event.preventDefault();
-    document.getElementById("search").focus();
-  }
-});

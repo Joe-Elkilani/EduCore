@@ -15,6 +15,13 @@ body {
   min-height: 100vh;
 }
 
+.page.sidebar-collapsed .logo div,
+.page.sidebar-collapsed .side nav a span,
+.page.sidebar-collapsed .plan h5,
+.page.sidebar-collapsed .plan button {
+  display: none;
+}
+
 /* responsive */
 
 @media (max-width: 1100px) {

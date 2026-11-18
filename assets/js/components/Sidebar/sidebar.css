@@ -90,3 +90,106 @@
   margin-top: 10px;
   font-weight: 500;
 }
+
+/* Sidebar transition */
+.side {
+  width: 250px;
+  min-height: 100vh;
+  transition:
+    width 0.3s ease,
+    transform 0.3s ease;
+  overflow: hidden;
+}
+
+/* Collapsed sidebar */
+.page.sidebar-collapsed .side {
+  width: 76px;
+}
+
+.page.sidebar-collapsed .logo div,
+.page.sidebar-collapsed .side nav a:not(:has(i)),
+.page.sidebar-collapsed .plan h5,
+.page.sidebar-collapsed .plan button {
+  display: none;
+}
+
+.page.sidebar-collapsed .logo {
+  justify-content: center;
+  padding: 0;
+}
+
+.page.sidebar-collapsed .logo i {
+  font-size: 35px;
+}
+
+.page.sidebar-collapsed .side nav a {
+  text-align: center;
+  padding: 12px 0;
+  font-size: 0;
+}
+
+.page.sidebar-collapsed .side nav a i {
+  font-size: 18px;
+  width: auto;
+}
+
+.page.sidebar-collapsed .plan {
+  padding: 15px 5px;
+}
+
+.page.sidebar-collapsed .side nav a span {
+  display: none;
+}
+
+/* Toggle button */
+.sidebar-toggle {
+  border: none;
+  background: transparent;
+  color: #64748b;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.sidebar-toggle:hover {
+  background: #f1f5f9;
+}
+
+/* Mobile overlay */
+.sidebar-overlay {
+  display: none;
+}
+
+/* Mobile drawer */
+@media (max-width: 768px) {
+  .page .side {
+    display: flex;
+  }
+  .side {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 1050;
+    transform: translateX(-100%);
+    display: flex;
+  }
+
+  .page.sidebar-open .side {
+    transform: translateX(0);
+  }
+
+  .page.sidebar-open .sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgb(0 0 0 / 45%);
+    z-index: 1040;
+  }
+
+  .page.sidebar-collapsed .side {
+    width: 250px;
+  }
+}

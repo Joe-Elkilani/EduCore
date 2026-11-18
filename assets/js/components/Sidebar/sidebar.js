@@ -1,6 +1,6 @@
 export function renderSidebar() {
   return `
-    <aside class="side">
+    <aside class="side" id="sidebar">
         <div class="logo">
           <i class="fa-solid fa-graduation-cap"></i>
           <div>
@@ -10,20 +10,21 @@ export function renderSidebar() {
         </div>
 
         <nav>
-          <a href="#" class="active"
-            ><i class="fa-solid fa-house"></i> Overview</a
-          >
-          <a href="#"><i class="fa-solid fa-user-group"></i> Teachers</a>
-          <a href="#"><i class="fa-solid fa-users"></i> Students</a>
-          <a href="#"><i class="fa-solid fa-book"></i> Subjects</a>
-          <a href="#"><i class="fa-solid fa-people-group"></i> Groups</a>
-          <a href="#"><i class="fa-regular fa-calendar"></i> Schedule</a>
-          <a href="#"><i class="fa-solid fa-circle-check"></i> Attendance</a>
-          <a href="#"><i class="fa-solid fa-chart-column"></i> Reports</a>
+          <a href="#" title="Overview" class="active">
+            <i class="fa-solid fa-house"></i>
+            <span>Overview</span>
+          </a>
+          <a href="#" title="Teachers"><i class="fa-solid fa-user-group"></i> <span>Teachers</span></a>
+          <a href="#" title="Students"><i class="fa-solid fa-users"></i> <span>Students</span></a>
+          <a href="#" title="Subjects"><i class="fa-solid fa-book"></i> <span>Subjects</span></a>
+          <a href="#" title="Groups"><i class="fa-solid fa-people-group"></i> <span>Groups</span></a>
+          <a href="#" title="Schedule"><i class="fa-regular fa-calendar"></i> <span>Schedule</span></a>
+          <a href="#" title="Attendance"><i class="fa-solid fa-circle-check"></i> <span>Attendance</span></a>
+          <a href="#" title="Reports"><i class="fa-solid fa-chart-column"></i> <span>Reports</span></a>
 
           <hr />
 
-          <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+          <a href="#" title="Settings"><i class="fa-solid fa-gear"></i> <span>Settings</span></a>
         </nav>
 
         <div class="plan">
